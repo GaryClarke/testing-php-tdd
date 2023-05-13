@@ -1,3 +1,4 @@
 .idea
 vendor/
 notes.txt
+.phpunit.result.cache
