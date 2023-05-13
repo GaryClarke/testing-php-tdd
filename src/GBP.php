@@ -11,8 +11,8 @@ class GBP
         $this->amount = $amount;
     }
 
-    public function times(int $multiplier): void
+    public function times(int $multiplier): GBP
     {
-        $this->amount *= $multiplier;
+        return new GBP($this->amount * $multiplier);
     }
 }
