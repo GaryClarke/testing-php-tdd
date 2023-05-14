@@ -101,4 +101,20 @@ class MultiCurrencyTest extends TestCase
         $result = $bank->reduce($sum, 'GBP');
         $this->assertEquals(Money::gbp(20), $result);
     }
+
+    public function testLetsGoCrazy(): void
+    {
+        $fiveGbp = Money::gbp(5);
+        $tenUsd = Money::usd(10);
+        $bank = new Bank();
+        $bank->addRate('USD', 'GBP', 2);
+        $sum1 = (new Sum($fiveGbp, $tenUsd))->times(2)
+            ->plus(new Sum($fiveGbp, $tenUsd)); // 30
+        $sum2 = (new Sum($fiveGbp, $tenUsd))
+            ->plus(new Sum($fiveGbp, $tenUsd))->times(4); // 80
+        $result1 = $bank->reduce($sum1, 'GBP');
+        $result2 = $bank->reduce($sum2, 'GBP');
+        $this->assertEquals(Money::gbp(30), $result1);
+        $this->assertEquals(Money::gbp(80), $result2);
+    }
 }
