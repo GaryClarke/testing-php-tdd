@@ -19,6 +19,7 @@ class MultiCurrencyTest extends TestCase
         $this->assertFalse((new GBP(5))->equals(new GBP(6)));
         $this->assertTrue((new USD(5))->equals(new USD(5)));
         $this->assertFalse((new USD(5))->equals(new USD(6)));
+        $this->assertFalse((new USD(5))->equals(new GBP(5)));
     }
 
     public function testUDSMultiplication(): void
