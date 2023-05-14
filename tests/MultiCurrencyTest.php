@@ -56,7 +56,17 @@ class MultiCurrencyTest extends TestCase
     public function testReduceMoney(): void
     {
         $bank = new Bank();
+        $bank->addRate('GBP', 'GBP', 999);
         $result = $bank->reduce(Money::gbp(1), 'GBP');
+        $this->assertEquals(Money::gbp(1), $result);
+    }
+
+    public function testReduceMoneyUsingDifferentCurrency(): void
+    {
+        $bank = new Bank();
+        $bank->addRate('USD', 'GBP', 1);
+        $bank->addRate('USD', 'GBP', 2);
+        $result = $bank->reduce(Money::usd(2), 'GBP');
         $this->assertEquals(Money::gbp(1), $result);
     }
 }
