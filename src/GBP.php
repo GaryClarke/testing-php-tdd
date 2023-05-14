@@ -2,10 +2,8 @@
 
 namespace App;
 
-class GBP
+class GBP extends Money
 {
-    private ?float $amount = null;
-
     public function __construct(float $amount)
     {
         $this->amount = $amount;
@@ -14,10 +12,5 @@ class GBP
     public function times(int $multiplier): GBP
     {
         return new GBP($this->amount * $multiplier);
-    }
-
-    public function equals(GBP $gbp): bool
-    {
-        return $this->amount === $gbp->amount;
     }
 }
