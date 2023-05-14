@@ -9,7 +9,7 @@ class GBP extends Money
         $this->amount = $amount;
     }
 
-    public function times(int $multiplier): GBP
+    public function times(int $multiplier): Money
     {
         return new GBP($this->amount * $multiplier);
     }
