@@ -4,7 +4,7 @@ namespace App;
 
 class GBP
 {
-    public ?float $amount = null;
+    private ?float $amount = null;
 
     public function __construct(float $amount)
     {
