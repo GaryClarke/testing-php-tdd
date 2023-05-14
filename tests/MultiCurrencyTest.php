@@ -2,6 +2,7 @@
 
 use App\Bank;
 use App\Money;
+use App\Sum;
 use PHPUnit\Framework\TestCase;
 
 class MultiCurrencyTest extends TestCase
@@ -33,5 +34,14 @@ class MultiCurrencyTest extends TestCase
         $bank = new Bank();
         $reduced = $bank->reduce($sum, 'GBP');
         $this->assertEquals(Money::gbp(10), $reduced);
+    }
+
+    public function testPlusReturnsSum(): void
+    {
+        $five = Money::gbp(5);
+        $sum = $five->plus($five);
+        $this->assertInstanceOf(Sum::class, $sum);
+        $this->assertEquals($five, $sum->augend);
+        $this->assertEquals($five, $sum->addend);
     }
 }
