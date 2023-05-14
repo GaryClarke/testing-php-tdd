@@ -90,4 +90,15 @@ class MultiCurrencyTest extends TestCase
         $result = $bank->reduce($sum, 'GBP');
         $this->assertEquals(Money::gbp(15), $result);
     }
+
+    public function testSumTimes(): void
+    {
+        $fiveGbp = Money::gbp(5);
+        $tenUsd = Money::usd(10);
+        $bank = new Bank();
+        $bank->addRate('USD', 'GBP', 2);
+        $sum = (new Sum($fiveGbp, $tenUsd))->times(2);
+        $result = $bank->reduce($sum, 'GBP');
+        $this->assertEquals(Money::gbp(20), $result);
+    }
 }
