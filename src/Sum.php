@@ -5,10 +5,15 @@ namespace App;
 class Sum implements Expression
 {
     public function __construct(
-        public Money $augend,
-        public Money $addend
+        public Expression $augend,
+        public Expression $addend
     )
     {
+    }
+
+    public function plus(Expression $addend): Expression
+    {
+        return new Sum($this, $addend);
     }
 
     public function reduce(Bank $bank, string $to): Money
