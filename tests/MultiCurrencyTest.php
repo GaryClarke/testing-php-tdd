@@ -69,4 +69,14 @@ class MultiCurrencyTest extends TestCase
         $result = $bank->reduce(Money::usd(2), 'GBP');
         $this->assertEquals(Money::gbp(1), $result);
     }
+
+    public function testMixedAddition(): void
+    {
+        $fiveGbp = Money::gbp(5);
+        $tenUsd = Money::usd(10);
+        $bank = new Bank();
+        $bank->addRate('USD', 'GBP', 2);
+        $result = $bank->reduce($fiveGbp->plus($tenUsd), 'GBP');
+        $this->assertEquals(Money::gbp(10), $result);
+    }
 }
