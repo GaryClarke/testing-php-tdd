@@ -1,5 +1,6 @@
 <?php // /tests/MultiCurrencyTest.php
 
+use App\Bank;
 use App\Money;
 use PHPUnit\Framework\TestCase;
 
@@ -23,5 +24,14 @@ class MultiCurrencyTest extends TestCase
     {
         $this->assertEquals('GBP', Money::gbp(1)->currency());
         $this->assertEquals('USD', Money::usd(1)->currency());
+    }
+
+    public function testSimpleAddition(): void
+    {
+        $five = new Money(5, 'GBP');
+        $sum = $five->plus($five);
+        $bank = new Bank();
+        $reduced = $bank->reduce($sum, 'GBP');
+        $this->assertEquals(Money::gbp(10), $reduced);
     }
 }
