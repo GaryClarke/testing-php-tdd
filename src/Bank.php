@@ -6,6 +6,6 @@ class Bank
 {
     public function reduce(Expression $source, string $targetCurrency): Money
     {
-        return Money::gbp(10);
+        return $source->reduce($targetCurrency);
     }
 }
