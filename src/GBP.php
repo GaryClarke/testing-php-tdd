@@ -6,6 +6,6 @@ class GBP extends Money
 {
     public function times(int $multiplier): Money
     {
-        return Money::gbp($this->amount * $multiplier);
+        return new Money($this->amount * $multiplier, $this->currency);
     }
 }
