@@ -1,6 +1,7 @@
 <?php // /tests/MultiCurrencyTest.php
 
 use App\GBP;
+use App\USD;
 use PHPUnit\Framework\TestCase;
 
 class MultiCurrencyTest extends TestCase
@@ -16,5 +17,12 @@ class MultiCurrencyTest extends TestCase
     {
         $this->assertTrue((new GBP(5))->equals(new GBP(5)));
         $this->assertFalse((new GBP(5))->equals(new GBP(6)));
+    }
+
+    public function testUDSMultiplication(): void
+    {
+        $five = new USD(5);
+        $this->assertEquals(new USD(10), $five->times(2));
+        $this->assertEquals(new USD(15), $five->times(3));
     }
 }
