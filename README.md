@@ -4,7 +4,7 @@
 
 <hr>
 
-This is a comprehensive step-by-step video course on designing robust PHP applications with Test-driven development (TDD).
+A comprehensive step-by-step video course on designing robust PHP applications with Test-driven development (TDD).
 
 To get started all you need to do is
 
