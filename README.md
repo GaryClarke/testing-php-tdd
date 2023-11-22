@@ -6,7 +6,7 @@
 
 A comprehensive step-by-step video course on designing robust PHP applications with Test-driven development (TDD).
 
-To get started all you need to do is:
+To get started, all you need to do is:
 
 <a href="https://garyclarketech.teachable.com/p/test-driven-php">Purchase the course here and get 20% discount</a>
 
@@ -17,6 +17,6 @@ To Set up your development environment, you will need the following installed on
 1. Composer
 2. Pest
 
-All these are for your information. The most exciting part is that every single step are covered in the <a href="https://garyclarketech.teachable.com/p/test-driven-php">course</a>.
+All these are for your information. The most exciting part is that every single step is covered in the <a href="https://garyclarketech.teachable.com/p/test-driven-php">course</a>.
 
 Happy Coding.
