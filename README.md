@@ -17,6 +17,6 @@ To Set up your development environment, you will need the following installed on
 1. Composer
 2. Pest
 
-All these are for your information. The most exciting part is that every single step is covered in the course.
+All these are for your information. The most exciting part is that every single step are covered in the <a href="https://garyclarketech.teachable.com/p/test-driven-php">course</a>.
 
 Happy Coding.
