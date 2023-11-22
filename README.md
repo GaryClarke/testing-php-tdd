@@ -1,8 +1,8 @@
 <h1><a href="https://garyclarketech.teachable.com/p/test-driven-php">TEST-DRIVEN PHP</a></h1>
 
-<hr>
 
 <h4>Created by <a href="https://www.youtube.com/@GaryClarkeTech"> Gary Clarke</a></h4>
+<hr>
 
 This is a comprehensive step-by-step video course on designing robust PHP applications with Test-driven development (TDD).
 
