@@ -1,4 +1,4 @@
-<h1><a href="https://garyclarketech.teachable.com/p/test-driven-php">TEST-DRIVEN PHP</a></h1>h1>
+<h1><a href="https://garyclarketech.teachable.com/p/test-driven-php">TEST-DRIVEN PHP</a></h1>
 
 <h4><a href="https://www.youtube.com/@GaryClarkeTech">Created by Gary Clarke</a></h4>
 
