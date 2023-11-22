@@ -2,7 +2,7 @@
 
 <hr>
 
-<h4><a href="https://www.youtube.com/@GaryClarkeTech">Created by Gary Clarke</a></h4>
+<h4>Created by <a href="https://www.youtube.com/@GaryClarkeTech"> Gary Clarke</a></h4>
 
 This is a comprehensive step-by-step video course on designing robust PHP applications with Test-driven development (TDD).
 
