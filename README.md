@@ -6,7 +6,7 @@
 
 A comprehensive step-by-step video course on designing robust PHP applications with Test-driven development (TDD).
 
-To get started all you need to do is
+To get started all you need to do is:
 
 <a href="https://garyclarketech.teachable.com/p/test-driven-php">Purchase the course here and get 20% discount</a>
 
